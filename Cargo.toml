@@ -1,0 +1,12 @@
+[package]
+name = "public_info_subscribe"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+sonic-rs = "0.3"
+tokio = { version = "1.36", features = ["full"] }
+anyhow = "1.0"
+thiserror = "1.0"
+chrono = "0.4"
+serde = { version = "1.0", features = ["derive"] }
