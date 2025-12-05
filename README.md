@@ -1,0 +1,2 @@
+# public_info_subscribe
+主要用作便携的接入各个市场的某些公开信息
