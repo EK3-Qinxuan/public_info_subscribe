@@ -44,7 +44,7 @@ fn main() -> Result<()> {
         high_24h: 51000.0,
         low_24h: 49000.0,
         volume_24h: 1000.0,
-        timestamp: 1234567890,
+        timestamp: 1234567890, // 使用固定时间戳便于示例输出的可重现性
     };
 
     // 使用 sonic-rs 序列化（比标准 serde_json 更快）
@@ -93,7 +93,7 @@ fn main() -> Result<()> {
                 quantity: 5.5,
             },
         ],
-        timestamp: 1234567890,
+        timestamp: 1234567890, // 使用固定时间戳便于示例输出的可重现性
     };
 
     // 序列化为美化的 JSON（用于展示）

@@ -82,7 +82,7 @@ async fn main() -> Result<()> {
         high_24h: 51500.0,
         low_24h: 48900.0,
         volume_24h: 15234.56,
-        timestamp: chrono::Utc::now().timestamp_millis() as u64,
+        timestamp: chrono::Utc::now().timestamp_millis().max(0) as u64,
     });
     subscriber.push_data(ticker)?;
 
@@ -109,7 +109,7 @@ async fn main() -> Result<()> {
                 quantity: 12.1,
             },
         ],
-        timestamp: chrono::Utc::now().timestamp_millis() as u64,
+        timestamp: chrono::Utc::now().timestamp_millis().max(0) as u64,
     });
     subscriber.push_data(orderbook)?;
 
@@ -119,7 +119,7 @@ async fn main() -> Result<()> {
         price: 450.5,
         quantity: 2.5,
         is_buyer_maker: false,
-        timestamp: chrono::Utc::now().timestamp_millis() as u64,
+        timestamp: chrono::Utc::now().timestamp_millis().max(0) as u64,
     });
     subscriber.push_data(trade)?;
 

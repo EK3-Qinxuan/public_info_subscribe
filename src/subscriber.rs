@@ -83,6 +83,7 @@ impl Subscriber {
                 if let Some(ref cb) = callback {
                     // 使用引用避免复制
                     if let Err(e) = cb(&data) {
+                        // TODO: 在生产环境中应该使用日志框架（如 tracing 或 log）
                         eprintln!("Callback error: {}", e);
                     }
                 }

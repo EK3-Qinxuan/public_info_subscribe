@@ -73,7 +73,7 @@ async fn main() -> Result<()> {
         high_24h: 51000.0,
         low_24h: 49000.0,
         volume_24h: 1000.0,
-        timestamp: chrono::Utc::now().timestamp_millis() as u64,
+        timestamp: chrono::Utc::now().timestamp_millis().max(0) as u64,
     });
 
     subscriber.push_data(ticker_data)?;
