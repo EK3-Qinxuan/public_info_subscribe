@@ -1,0 +1,17 @@
+[package]
+name = "pis-sdk"
+version = "0.1.0"
+edition = "2021"
+description = "High-level SDK for portable public market websocket subscriptions"
+license = "MIT"
+
+[features]
+default = ["binance"]
+binance = ["connector-binance"]
+
+[dependencies]
+async-trait = { workspace = true }
+futures = { workspace = true }
+pis-core = { path = "../core" }
+tracing = { workspace = true }
+connector-binance = { path = "../connectors/binance", optional = true }

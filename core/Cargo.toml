@@ -1,0 +1,15 @@
+[package]
+name = "pis-core"
+version = "0.1.0"
+edition = "2021"
+description = "Core traits and types for public market websocket subscription SDK"
+license = "MIT"
+
+[dependencies]
+async-trait = { workspace = true }
+futures = { workspace = true }
+serde = { workspace = true }
+serde_json = { workspace = true }
+thiserror = { workspace = true }
+tracing = { workspace = true }
+url = { workspace = true }

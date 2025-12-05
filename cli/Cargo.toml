@@ -1,0 +1,13 @@
+[package]
+name = "pis-cli"
+version = "0.1.0"
+edition = "2021"
+description = "CLI for testing public info subscriptions"
+license = "MIT"
+
+[dependencies]
+pis-sdk = { path = "../sdk" }
+pis-core = { path = "../core" }
+futures = { workspace = true }
+tracing = { workspace = true }
+async-trait = { workspace = true }
